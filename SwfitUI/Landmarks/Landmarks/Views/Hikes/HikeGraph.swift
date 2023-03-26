@@ -5,6 +5,13 @@ Abstract:
 The elevation, heart rate, and pace of a hike plotted on a graph.
 */
 
+// MARK: -
+/*
+ ripple()
+ - Animation extension 재정의
+ - spring 애니메이션 적용하고 dampingFraction을 설정하여 바가 튀도록 설정
+ */
+
 import SwiftUI
 
 extension Animation {
