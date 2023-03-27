@@ -22,6 +22,11 @@
  @Published
  -  데이터 변경사항을 발행
  - Subscriber가 변경사항을 수신
+ 
+ Dictionary -> categories
+ - landmarks 배열을 카테고리 별로 그룹화
+ - 그룹화된 결과를 카테고리 이름이 key로 설정 된 Dictonary로 변환
+ - 카테고리 이름은 category 속성의 rawValue(원시값)로 사용
  */
 
 import Foundation
@@ -29,7 +34,19 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    
     var hikes: [Hike] = load("hikeData.json")
+    
+    var features: [Landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+    
+    var categories: [String: [Landmark]] {
+        Dictionary(
+            grouping: landmarks,
+            by: { $0.category.rawValue }
+        )
+    }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -43,6 +43,10 @@ TypeAlias
  
  CLLocationCoordinate2D
  - WGS 84 기준 프레임을 사용하여 지정된 위치와 관련된 위도(latitude) / 경도(longitude)
+ 
+ CaseIterable
+ - 해당 프로토콜을 준수하는 유형은 일반적으로 연관 값이 없는 enumerations
+ - type의 allCases 속성을 사용하여 모든 케이스 컬렉션에 액세스할 수 있음
  */
 
 
@@ -57,6 +61,14 @@ struct Landmark: Hashable, Codable {
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
+    
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
     
     private var imageName: String
     var image: Image {
