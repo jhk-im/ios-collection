@@ -5,6 +5,15 @@
 //  Created by HUN on 2023/03/28.
 //
 
+// MARK: -
+/*
+ CloasedRange<>
+ - 하한 이상 상한 이하의 간격을 나타내는 타입
+ - 범위 인스턴스는 ... 연산자를 사용
+ - 범위 인스턴스는 상한과 하한을 모두 포함
+ - 빈 범위는 표현할 수 없음
+ */
+
 import SwiftUI
 
 struct ProfileEditor: View {

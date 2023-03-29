@@ -5,6 +5,13 @@
 //  Created by HUN on 2023/03/28.
 //
 
+// MARK: -
+/*
+ static let `default`
+ - ProfileEditor(profile: .constant(.default))에서 .default처럼 어디에서는 접근 가능
+
+ */
+
 import Foundation
 
 struct Profile {

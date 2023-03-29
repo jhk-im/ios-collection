@@ -214,9 +214,7 @@
 				B1FA473929CD9A0C00437431 /* Badges */,
 				B1FA473E29CED77200437431 /* Hikes */,
 				B176852029D322A6007474C8 /* Categories */,
-				B176852129D322D4007474C8 /* ProfileHost.swift */,
-				B176852329D3231C007474C8 /* ProfileSummary.swift */,
-				B189BB5129D32659004804CB /* ProfileEditor.swift */,
+				B189BB5329D3275C004804CB /* Profiles */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +227,16 @@
 				B176851C29D175B6007474C8 /* CategoryItem.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		B189BB5329D3275C004804CB /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				B176852129D322D4007474C8 /* ProfileHost.swift */,
+				B176852329D3231C007474C8 /* ProfileSummary.swift */,
+				B189BB5129D32659004804CB /* ProfileEditor.swift */,
+			);
+			path = Profiles;
 			sourceTree = "<group>";
 		};
 		B1FA472C29CC2B0000437431 /* Helpers */ = {
