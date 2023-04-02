@@ -1,1 +1,1 @@
-# ios-samples
+# ios-collection
